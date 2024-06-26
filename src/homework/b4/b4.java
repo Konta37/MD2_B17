@@ -9,12 +9,14 @@ public class b4 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter integer");
         List<Integer> list = new ArrayList<Integer>();
-        System.out.println("Enter number of el");
+
+        String str = "abc123";
+        String[] strs = str.split("");
+
         int n = Integer.parseInt(sc.nextLine());
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < strs.length; i++) {
             try{
-                String a = sc.nextLine();
-                list.add(Integer.parseInt(a));
+                list.add(Integer.parseInt(strs[i]));
             }catch (NumberFormatException e){
                 list.add(0);
             }
